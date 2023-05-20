@@ -1,31 +1,37 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./index.css">
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    <script>
-      const clickSendAnswerButton = () => {
-        const inputAnswer = document.getElementById('answer').value;
-        if (!inputAnswer) {
-          alert('回答してね');
-          return ;
-        }
-        axios.post('/api.php', {
-          dummy: "test",
-          answer: inputAnswer,
-        })
-        .then(function (response) {
-          console.log(response);
-          location.href = 'done.php';
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-      }
-    </script>
+    <script async src="./index.js"></script>
   </head>
   <body>
     <h1>アンケート画面</h1>
-    <input type="text" id="answer" placeholder="回答を入力" size="20">
+    <div>
+      <label for="answer">その他</label>
+      <input type="text" id="answer" placeholder="回答を入力" size="20">
+    </div>
+    <div>
+      <label for="answer">その他</label>
+      <input type="text" id="answer" placeholder="回答を入力" size="20">
+    </div>
+    <div>
+      <label for="answer">その他</label>
+      <input type="text" id="answer" placeholder="回答を入力" size="20">
+    </div>
+    <div>
+      <label for="answer">その他</label>
+      <input type="text" id="answer" placeholder="回答を入力" size="20">
+    </div>
+    <div>
+      <label for="answer">その他</label>
+      <input type="text" id="answer" placeholder="回答を入力" size="20">
+    </div>
+    <div>
+      <label for="answer">その他</label>
+      <input type="text" id="answer" placeholder="回答を入力" size="20">
+    </div>
     <button onclick="clickSendAnswerButton()">回答を送信</button>
   </body>
 </html>
