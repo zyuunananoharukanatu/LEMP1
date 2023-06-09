@@ -15,3 +15,5 @@ LAMP（Apache＋php＋MySQL）練習用
 
 ここまでできればこのプロジェクトは完了。
 Nginx化や、Laravel＋Vite＋Inertia＋TypeScriptはまた別に
+
+Nginx化、NEMPで調べればすぐできそう
