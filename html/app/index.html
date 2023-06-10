@@ -7,31 +7,64 @@
     <script async src="./index.js"></script>
   </head>
   <body>
-    <h1>アンケート画面</h1>
-    <div>
-      <label for="answer">その他</label>
-      <input type="text" id="answer" placeholder="回答を入力" size="20">
+    <h1>名所アンケート</h1>
+    <div width="400px">
+      <h2>好きな名所は、どこですか？</h2>
+      <div>
+        <span>好きな名所（３箇所選択してください）</span>
+        <div class="form-radio">
+          <label>
+            <input id="radio-1" type="radio" name="like-forms-place-1" value="1">
+            <span class="form-radio-name">
+              <label for="radio-1" class="form-radio-text">選択肢１</label>
+            </span>
+          </label>
+          <label>
+            <input id="radio-2" type="radio" name="like-forms-place-1" value="2">
+            <span class="form-radio-name">
+              <label for="radio-2" class="form-radio-text">選択肢2</label>
+            </span>
+          </label>
+          <label>
+            <input id="radio-3" type="radio" name="like-forms-place-1" value="3">
+            <span class="form-radio-name">
+              <label for="radio-3" class="form-radio-text">選択肢3</label>
+            </span>
+          </label>
+          <label>
+            <input id="radio-4" type="radio" name="like-forms-place-1" value="4">
+            <span class="form-radio-name">
+              <label for="radio-4" class="form-radio-text">選択肢4</label>
+            </span>
+          </label>
+        </div>
+      </div>
+      <div>
+        <label for="answer">他の好きな場所</label>
+        <input type="text" class="form-text" id="answer" placeholder="他の好きな場所をご自由に入力してください" size="20">
+      </div>
+
+      <h2>ご連絡先</h2>
+      <div>
+        <label for="answer">ご氏名</label>
+        <input type="text" class="form-text" id="answer" placeholder="ご氏名を入力" size="20">
+      </div>
+      <div>
+        <label for="answer">ご住所</label>
+        <input type="text" class="form-text" id="answer" placeholder="ご住所を入力" size="20">
+      </div>
+      <div class="form-checkbox">
+        <span>個人情報の取扱い</span>
+        <label>
+          <input type="checkbox" name="doui" id="doui">
+          <span class="form-checkbox-name">
+            <span class="form-checkbox-text">同意する</span>
+          </span>
+        </label>
+      </div>
+      <div>
+        <button class="form-submit-button" onclick="clickSendAnswerButton()">回答を送る</button>
+      </div>
     </div>
-    <div>
-      <label for="answer">その他</label>
-      <input type="text" id="answer" placeholder="回答を入力" size="20">
-    </div>
-    <div>
-      <label for="answer">その他</label>
-      <input type="text" id="answer" placeholder="回答を入力" size="20">
-    </div>
-    <div>
-      <label for="answer">その他</label>
-      <input type="text" id="answer" placeholder="回答を入力" size="20">
-    </div>
-    <div>
-      <label for="answer">その他</label>
-      <input type="text" id="answer" placeholder="回答を入力" size="20">
-    </div>
-    <div>
-      <label for="answer">その他</label>
-      <input type="text" id="answer" placeholder="回答を入力" size="20">
-    </div>
-    <button onclick="clickSendAnswerButton()">回答を送信</button>
   </body>
 </html>

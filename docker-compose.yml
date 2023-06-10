@@ -23,3 +23,16 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: rookt
     command: --innodb-use-native-aio=0
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=db
+      - PMA_USER=root
+      - PMA_PASSWORD=rookt
+    links:
+      - db
+    ports:
+      - 4040:80
+    volumes:
+      - ./phpmyadmin/sessions:/sessions
