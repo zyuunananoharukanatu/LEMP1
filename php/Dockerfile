@@ -1,10 +1,13 @@
-FROM php:8.0.13-apache
+FROM php:8.2-fpm
 
 RUN bash
 
+COPY ./php.ini /usr/local/etc/php/
+
 # extension
-RUN apt-get update \
-    && docker-php-ext-install pdo_mysql
+ RUN apt-get update \
+   && apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev libonig-dev \
+   && docker-php-ext-install pdo_mysql mysqli gd iconv exif
 
 # composer
 RUN curl -S https://getcomposer.org/installer | php \
@@ -19,6 +22,3 @@ RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.s
     && nvm use v14.16.0 \
     && nvm alias default v14.16.0 \
     && npm install -g npm
-
-RUN a2enmod rewrite \
-  && service apache2 restart
